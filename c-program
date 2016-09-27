@@ -1,0 +1,63 @@
+C programs in online compiler,
+
+=======================
+/*----------------------------------------------------*/
+/*  Reverce order number                              */    
+/*----------------------------------------------------*/
+
+#include<stdio.h>
+ int main() {
+    int numbers[100], count = 0, temp = 0 , i = 0, j = 0;
+    
+    printf("Enter number limit:");
+    scanf("%d",&count);
+
+    for(i=0;i<count;i++){
+        printf("Enter number:");
+        scanf("%d",&numbers);
+    }
+    
+    for(i = 0; i < count; i++){
+        for(j = 1; j < count; j++){
+            if(numbers[i] > numbers[j]){
+                temp = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = temp;
+            }
+        }    
+    }    
+    
+    printf("Reverse order numbers:");
+    for(i = 0; i < count; i++){
+        printf("\n%d", numbers[i]);
+    }
+ 
+   return (0);
+}
+
+/*----------------------------------------------------*/
+/*  Reverce string                                    */    
+/*----------------------------------------------------*/
+
+#include<stdio.h>
+ 
+int main() {
+    
+   char str[100];
+   int length=0, i = 0;
+ 
+   printf("Enter your string :");
+   scanf("%s",&str);
+ 
+   while(str[i] != '\0') {
+       length++;
+   }
+   printf("Your reverse string result");
+
+   for(i = length; i >= 0; i-- ){
+      printf("%c",&str[i]);
+   }
+
+   return (0);
+}
+=======================
